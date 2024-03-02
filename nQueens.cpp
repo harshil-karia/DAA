@@ -7,7 +7,7 @@ bool isSafe(){
 
 void solve(){
     
-}
+}zcdcs
 
 int main(){
 

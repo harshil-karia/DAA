@@ -27,13 +27,13 @@ int main()
 	int profit[] = { 60, 100, 120 }; 
 	int weight[] = { 10, 20, 30 }; 
 	int W = 50; 
+
 	int n = sizeof(profit) / sizeof(profit[0]);
 	clock_t start,end;
 	start = clock();
 	int ans = knapSack(W, weight, profit, n);
 	end = clock();
 	float time = float(end-start)/(float)CLOCKS_PER_SEC;
-	cout<<endl<<"Time : "<<time<<endl<<ans; 
-	 
+	cout<<endl<<"Time : "<<time<<endl<<ans;  
 	return 0; 
 }

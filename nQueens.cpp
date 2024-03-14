@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define N 6
+#define N 4
 using namespace std;
 
 

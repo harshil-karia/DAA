@@ -70,11 +70,9 @@ bool solveNQ()
 		cout << "Solution does not exist";
 		return false;
 	}
-
 	printSolution(board);
 	return true;
 }
-
 
 int main()
 {

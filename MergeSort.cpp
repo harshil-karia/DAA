@@ -15,7 +15,7 @@ void merge(int a[],int begin,int mid,int end)
     }
     for(int j=0;j<n2;j++)
     {
-        rightArray[j] = a[mid+1+j];
+        rightArray[j] = a[mid+j+1];
     }
 
     i=j=0;
@@ -71,39 +71,9 @@ void print(int a[],int n)
 
 int main()
 {
-    int n=173000;
-    int best_case[n];
-    int worst_case[n];
-    int temp =0;
-    for(int i=n;i>0;i--)
-    {
-        worst_case[temp] = i;
-        temp++;
-    }
-    for(int i = 0;i<n;i++)
-    {
-        best_case[i] = i+1;
-    }
-
-    clock_t start1,end1,start2,end2;
-    start1 = clock();
-    mergeSort(best_case,0,n-1);
-    end1 = clock();
+    int n=5;
+    int arr[n]={3,5,1,2,8};
+    mergeSort(arr,0,n-1);
     cout<<endl;
-    start2 = clock();
-    mergeSort(worst_case,0,n-1);
-    end2 = clock();
-    cout<<endl;
-
-    float time1 = float(end1-start1)/(float)CLOCKS_PER_SEC;
-    cout<<"Best Case : "<<time1<<endl;
-    float time2 = float(end2 - start2)/(float)CLOCKS_PER_SEC;
-    cout<<"Worst Case : "<<time2<<endl;
-
-
-
-    cout<<"\n**********BEST CASE**********************\n";
-    print(best_case,n);
-    cout<<"\n******************WORST CASE****************\n";
-    print(worst_case,n);
+    print(arr,n);
 }

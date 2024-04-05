@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 
-int knap(int W,int wt[], int profit[], int n)
+int knap(int W,int wt[], int val[], int n)
 {
      int i,w;
      vector<vector<int>> K(n+1,vector<int>(W+1));
@@ -18,7 +18,7 @@ int knap(int W,int wt[], int profit[], int n)
              }
              else if(wt[i-1]<=w)
              {
-                 K[i][w] = max(profit[i-1] + K[i-1][w-wt[i-1]], K[i-1][w]);
+                 K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]], K[i-1][w]);
              }
              else
              {
@@ -26,12 +26,14 @@ int knap(int W,int wt[], int profit[], int n)
              }
          }
      }
+     cout<<n<<endl;
+     cout<<W<<endl;
      return K[n][W];
 }
 
 int main()
 {
-    int profit[] = {60,10,120};
+    int profit[] = {60,100,120};
     int weight[] = {10,20,30};
     int W=50;
     int n=3;

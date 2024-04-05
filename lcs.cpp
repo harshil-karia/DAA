@@ -25,13 +25,8 @@ int lcs(string s1,string s2){
 int main(){
     string s1="abc";
     string s2 = "aec";
-    clock_t start,end;
-	start = clock();
-	int ans = lcs(s1,s2);
-	end = clock();
-	float time = float(end-start)/(float)CLOCKS_PER_SEC;
-	cout<<endl<<time;
-    cout<<endl<<ans;
+    int ans = lcs(s1,s2);
+	cout<<endl<<ans;
 	return 0;
     
 }

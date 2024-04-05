@@ -93,13 +93,6 @@ int main()
 	g.addEdge(2, 0, 6); 
 	g.addEdge(0, 3, 5); 
 
-
-	 
-	clock_t start,end;
-	start = clock();
 	g.kruskals_mst();
-	end = clock();
-	float time = float(end-start)/(float)CLOCKS_PER_SEC;
-	cout<<endl<<time;
 	return 0; 
 }

@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void dfs(vector<int> adj[], int V, vector<int>& vis,
-		int i, int curr)
+void dfs(vector<int> adj[], int V, vector<int>& vis,int i, int curr)
 {
 	vis[curr] = 1;
 	for (auto x : adj[curr]) {
@@ -16,13 +15,9 @@ void dfs(vector<int> adj[], int V, vector<int>& vis,
 
 void AP(vector<int> adj[], int V)
 {
-
 	for (int i = 1; i <= V; i++) {
-
 		
 		int components = 0;
-
-		
 		vector<int> vis(V + 1, 0);
 
 		for (int j = 1; j <= V; j++) {
@@ -30,11 +25,9 @@ void AP(vector<int> adj[], int V)
 
 				if (!vis[j]) {
 
-				
 					components++;
-
-				
 					dfs(adj, V, vis, i, j);
+				
 				}
 			}
 		}
@@ -43,7 +36,6 @@ void AP(vector<int> adj[], int V)
 		}
 	}
 }
-
 
 void addEdge(vector<int> adj[], int u, int v)
 {
